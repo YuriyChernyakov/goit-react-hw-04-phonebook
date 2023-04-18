@@ -30,10 +30,18 @@ export default function App() {
         number: '227-91-26',
       },
     ]
-  });
+  }); 
   const [filter, setFilter] = useState('');
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  useEffect(() => {
+    const storageContacts = JSON.parse(localStorage.getItem(KEY_STORAGE));
+    if (storageContacts === null) {
+      localStorage.setItem(KEY_STORAGE, JSON.stringify(contacts))
+    }
+    
+  })
 
   useEffect(() => {
     localStorage.setItem(KEY_STORAGE, JSON.stringify(contacts));
