@@ -26,7 +26,7 @@ export default function App() {
       },
       {
         id: 'id-4',
-        name: 'Annie Copeland',
+        name: 'Annie Copelandr',
         number: '227-91-26',
       },
     ]
